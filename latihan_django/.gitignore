@@ -1,0 +1,2 @@
+#ignore django settings files.
+latihan_django/settings.py
