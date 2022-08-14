@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		{% block title %}
+			Latihan Django
+		{% endblock %}
+	</title>
+	{% block style_header %}
+		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	{% endblock %}
+</head>
+<body>
+	{% block body %}
+	{% endblock %}
+
+	{% block js_footer %}
+		<script type="text/javascript" src="{% static 'bootstrap/js/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'bootstrap/js/popper.js' %}" ></script>
+		<script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+	{% endblock %}
+</body>
+</html>
