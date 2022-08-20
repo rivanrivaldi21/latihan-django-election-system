@@ -1,0 +1,47 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+{% block title %}
+	Django - E-Voting
+{% endblock %}
+
+{% block style_header %}
+	{{ block.super }}
+	<style>
+		div.blue {
+			background-color: rgb(135, 135, 221);
+		}
+		h1 {
+			font-family : NewsGoth BT;
+			font-size : 25px;
+		}
+		div.main {
+			margin-top: 13%;
+		}
+		p, h1 {
+			text-align: center;
+			font-family : NewsGoth BT;
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="main">
+			<h1>Hello, welcome to django election system.</h1>
+			<p>
+				Please login to view or create a new election event. If you don't have an account yet, please click the registration button to create a new account.
+			</p>
+			<p>
+				<a href="/web/login" role="button" style="font-family:NewsGoth BT" class="btn btn-primary">Login</a>
+				<span style="margin-left:5px; margin-right:5px;">Or</span>
+				<a href="/web/register" role="button" style="font-family:NewsGoth BT" class="btn btn-primary">Register</a>
+			</p>
+			<p style="font-family:NewsGoth BT; margin-top:15px;">If you're a voter, please enter the invitation code you received in the email, then click the vote button to start voting.</p>
+			<form id="form" style="margin-left:24%;">
+				<input type="text" placeholder="Please enter your invitation code here" class="form-control" style="max-width:60%; display:inline-block; font-family:NewsGoth BT">
+				<a type="submit" style="font-family:NewsGoth BT; color:white;" role="button" class="btn btn-primary">Vote</a>
+			</form>
+		</div>
+	</div>
+{% endblock %}
